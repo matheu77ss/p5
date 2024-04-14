@@ -39,7 +39,7 @@ import p5 from '../core/main';
  * learn more about making sketches accessible.
  *
  * @method textOutput
- * @param  {Constant} [display] either FALLBACK or LABEL.
+ * @param  {(FALLBACK|LABEL)} [display] either FALLBACK or LABEL.
  *
  * @example
  * <div>
@@ -175,7 +175,7 @@ p5.prototype.textOutput = function(display) {
  * learn more about making sketches accessible.
  *
  * @method gridOutput
- * @param  {Constant} [display] either FALLBACK or LABEL.
+ * @param  {(FALLBACK|LABEL)} [display] either FALLBACK or LABEL.
  *
  * @example
  * <div>
@@ -496,7 +496,10 @@ p5.prototype._accsOutput = function(f, args) {
   if (!this.ingredients.shapes[f]) {
     this.ingredients.shapes[f] = [include];
     //if other shapes of this type have been created
-  } else if (this.ingredients.shapes[f] !== [include]) {
+  } else if (
+    this.ingredients.shapes[f].length !== 1 ||
+    this.ingredients.shapes[f][0] !== include
+  ) {
     //for every shape of this type
     for (let y in this.ingredients.shapes[f]) {
       //compare it with current shape and if it already exists make add false
