@@ -1,3 +1,5 @@
+Este trabalho está licenciado sob CC BY-ND 4.0. Para visualizar uma cópia desta licença, visite https://creativecommons.org/licenses/by-nd/4.0/© 2 por eu
+
 [![npm version](https://badge.fury.io/js/p5.svg)](https://www.npmjs.com/package/p5)
 [![All Contributors](https://img.shields.io/github/all-contributors/processing/p5.js?color=ee8449&style=flat-square)](#contributors)
 [![Total Downloads](https://img.shields.io/npm/dt/p5)](https://www.npmjs.com/package/p5)
